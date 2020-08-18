@@ -1,0 +1,180 @@
+    1  java
+    2  java version
+    3  java -version
+    4  sudo rm -rf "/Library/Internet Plug-Ins/JavaAppletPlugin.plugin"
+    5  sudo rm -rf "/Library/PreferencePanes/JavaControlPanel.prefPane"
+    6  sudo rm -rf "~/Library/Application Support/Java"
+    7  java -version
+    8  java -version
+    9  java
+   10  java -version
+   11  sudo rm -fr /Library/Internet\ Plug-Ins/JavaAppletPlugin.plugin
+   12  sudo rm -fr /Library/PreferencePanes/JavaControlPanel.prefPane
+   13  sudo rm -fr ~/Library/Application\ Support/Java
+   14  java -version
+   15  rm -r ~/"Library/Application Support/Oracle/Java"
+   16  java -version
+   17  java -version
+   18  java -version
+   19  java -version
+   20  /Users/smore/Desktop/Innopolis/Introduction\ to\ Pogramming/Labs/gnuplot-5.2.8/configure ; exit;
+   21  /Users/smore/Desktop/Innopolis/Introduction\ to\ Pogramming/Labs/gnuplot-5.2.8/depcomp ; exit;
+   22  /Users/smore/Desktop/Innopolis/Introduction\ to\ Pogramming/Labs/gnuplot-5.2.8/install-sh ; exit;
+   23  ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)" < /dev/null 2> /dev/null
+   24  gnuplot
+   25  gnuplot plot sin(x)
+   26  ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)" < /dev/null 2> /dev/null
+   27  brew install gnuplot
+   28  gnuplot
+   29  plot sin(x)
+   30  gnuplot
+   31  gnuplot
+   32  gnuplot
+   33  gnuplot
+   34  gnuplot
+   35  gnuplot
+   36  gnuplot
+   37  git
+   38  cd /Users/smore/Work/Innopolis/Unity/IGD
+   39  ls
+   40  echo "# IGD" >> README.md\ngit init\ngit add README.md\ngit commit -m "first commit"\ngit remote add origin https://github.com/SMore-Napi/IGD.git\ngit push -u origin master\n                
+   41  git commit 'Programming Test'
+   42  pip install pgm-parser \npython liches.py -n username
+   43  pip install pgm-parser \npython liches.py -n S_More
+   44  gnuplot
+   45  $ssh -X r.soldatov@osc-[2].edu.innopolis.ru
+   46  $ssh -X r.soldatov@osc-2.edu.innopolis.ru
+   47  $ssh -X r.soldatov@osc-2.edu.innopolis.ru
+   48  $ssh -X r.soldatov@osc-2.edu.innopolis.ru
+   49  $ssh - r.soldatov@osc-2.edu.innopolis.ru
+   50  $ssh -X [r.soldatov]@osc-[2].edu.innopolis.ru
+   51  $ssh -X [r.soldatov]@osc-[2].edu.innopolis.ru$ssh -X r.soldatov@osc-2.edu.innopolis.ru
+   52  $ssh -X r.soldatov@osc-2.edu.innopolis.ru
+   53  $ssh -X r.soldatov@osc-2.edu.innopolis.ru
+   54  mkdir ~/week1
+   55  ls
+   56  cd ~/week1
+   57  ls
+   58  ls
+   59  touch ex1.txt
+   60  ~
+   61  ls
+   62  cd /usr/bin
+   63  ls
+   64  ls | sort -r | tail -n 3
+   65  ls | sort r | tail -n 3
+   66  ls | tail -n 3
+   67  pw
+   68  pwd
+   69  grep PATTERN gcc
+   70  ls
+   71  cd gcc
+   72  ls -a gcc
+   73  ls -A gcc
+   74  ls -f gcc
+   75  ls -F gcc
+   76  ls gcc
+   77  ls
+   78  ls -a
+   79  ls -a gcc
+   80  head
+   81  cd /usr/bin
+   82  ls
+   83  head -n 3
+   84  ls
+   85  head -n 3 < file.txt
+   86  ls -F
+   87  ls -gcc
+   88  pwd
+   89  ls
+   90  ls -f gcc
+   91  ls lwp
+   92  ls -f lwp
+   93  ls -f gcc
+   94  ls -d gcc
+   95  ls -D gcc
+   96  ls -l gcc
+   97  ls gcc
+   98  ls m4
+   99  ls -c gcc
+  100  ls -C gcc
+  101  ls is gcc
+  102  ls -is gcc
+  103  grep gcc
+  104  cd /usr/bin
+  105  ls
+  106  grep gcc /usr/bin
+  107  grep 'gcc'
+  108  cd /usr/bin
+  109  grep -f
+  110  ls
+  111  grep -f gcc
+  112  ls -d gcc
+  113  ls -d *gcc*
+  114  ls -d *gcc* | sort -r
+  115  history > ex2.txt
+  116  cd.
+  117  ls
+  118  cd ~
+  119  ls
+  120  cd week1
+  121  touch ex2.txt
+  122  history > ex2.txt
+  123  ls | sort -r | tail -n 3
+  124  touch hello.tyu
+  125  mkdir world
+  126  rm hello.tyu
+  127  rm -r world
+  128  cd /usr/bin
+  129  ls
+  130  grep -d *gcc*
+  131  ls -d *gcc*
+  132  ls -d *gcc* | sort -r
+  133  ls -d *gcc* | sort -r > ~week1/ex1.txt
+  134  cd
+  135  ~cd
+  136  ls
+  137  pwd
+  138  cd /week1
+  139  cd ~/week1
+  140  ls
+  141  touch ex1.txt
+  142  cd /usr/bin
+  143  ls
+  144  ls -d *gcc* | sort -r
+  145  ls -d *gcc* | sort -r < /Users/smore/week1/ex1.txt
+  146  ls -d *gcc* | sort -r < ~/Users/smore/week1/ex1.txt
+  147  cd
+  148  pwd
+  149  cd /usr/bin
+  150  ls
+  151  touch ex1.txt
+  152  ~cd
+  153  cd~
+  154  cd ~
+  155  pwd
+  156  cd /week1
+  157  cd ~/week1
+  158  ls
+  159  history > ex2.txt
+  160  history > ex2.txt
+  161  history | tail -n 20 > ex2.txt
+  162  history | tail -n 160 > ex2.txt
+  163  history > ex2.txt
+  164  history
+  165  history 5
+  166  history
+  167  history 1
+  168  pwd
+  169  cd ~/week1
+  170  ls
+  171  touch ex2.txt
+  172  history > ex2.txt
+  173  history 1 > ex2.txt
+  174  cd /usr/bin
+  175  ls
+  176  ls /usr/bin | grep gcc | sort -r > ~/week1/ex1.txt
+  177  ls /usr/bin | grep gcc | sort -r > ~/week1/ex1.txt
+  178  history < ex2.txt
+  179  history > ~/week1/ex2.txt
+  180  ls /usr/bin | grep gcc | sort -r
