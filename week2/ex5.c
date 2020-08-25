@@ -98,7 +98,6 @@ void print_figure3(int height) {
         }
         printf("\n");
     }
-
 }
 
 /**
@@ -122,6 +121,7 @@ void print_figure4(int height) {
 int main(int args, char *argv[]) {
     int n;
     int figure_type;
+
     // In case sscanf has not successfully read
     if (sscanf(argv[1], "%d", &n) != 1 || sscanf(argv[2], "%d", &figure_type) != 1) {
         printf("Error argument!");

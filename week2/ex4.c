@@ -13,17 +13,17 @@ void swap(int *a, int *b) {
 
 int main() {
     int first, second;
-    // Asks user to input two integers
+
+    // Ask user to input two integers
     printf("Input the first integer:\n");
     scanf("%d", &first);
-
     printf("Input the second integer:\n");
     scanf("%d", &second);
-
 
     // Swap integers using a separate function
     swap(&first, &second);
 
+    // Print the result
     printf("Do the swapping\n");
     printf("first = %d\n", first);
     printf("second = %d\n", second);

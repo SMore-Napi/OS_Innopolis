@@ -13,22 +13,29 @@ int main(int args, char *argv[]) {
     }
 
     int width = 2 * height - 1;
+    int stars_count = 1;
 
-    int star_number = 1;
+    // Print triangle
     for (int i = 0; i < height; i++) {
-        int spaces = (width - star_number) / 2;
+        int spaces = (width - stars_count) / 2;
+
+        // Print spaces before stars
         for (int j = 0; j < spaces; j++) {
             printf(" ");
         }
-        for (int j = 0; j < star_number; j++) {
+
+        // Print stars
+        for (int j = 0; j < stars_count; j++) {
             printf("*");
         }
+
+        // Print spaces after stars
         for (int j = 0; j < spaces; j++) {
             printf(" ");
         }
         printf("\n");
 
-        star_number += 2;
+        stars_count += 2;
     }
 
     return 0;
