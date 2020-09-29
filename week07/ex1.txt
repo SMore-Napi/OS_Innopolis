@@ -1,0 +1,25 @@
+Output using 'size file' shell command on Mac OS:
+
+__TEXT	__DATA	__OBJC	others		dec		hex
+16384	16384	0	4295000064	4295032832	100010000
+
+
+Output using 'size -m file' shell command on Mac OS:
+
+Segment __PAGEZERO: 4294967296
+Segment __TEXT: 16384
+	Section __text: 2364
+	Section __stubs: 36
+	Section __stub_helper: 76
+	Section __cstring: 104
+	Section __unwind_info: 72
+	total 2652
+Segment __DATA_CONST: 16384
+	Section __got: 16
+	total 16
+Segment __DATA: 16384
+	Section __la_symbol_ptr: 48
+	Section __data: 8
+	total 56
+Segment __LINKEDIT: 16384
+total 4295032832
