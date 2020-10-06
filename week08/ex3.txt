@@ -1,0 +1,38 @@
+/** My findings about exercise 3:
+ * I used this command: ./ex2 & top -i 1
+ * Also, this command worked at the same way: ./ex2 & top
+ * And this one: run ./ex2, then run top
+ *
+ * So, the ex2 process was approaching to the top of the table
+ * because the 'MEM' column was increasing. In the end it was showing 100M+ (which looks logically correct)
+ * and then disappeared because the program was finished.
+ * Also, it took 0.6% of CPU resources during all execution
+ * The top processes from the table when this program was running are provided below:
+ *
+ * This description for the Exercise 3 is also duplicated in ex3.txt file
+ */
+
+/** The top processes from the table when this program was running*/
+/*
+ PID   COMMAND      %CPU TIME     #TH   #WQ  #PORT MEM    PURG   CMPRS  PGRP PPID STATE    BOOSTS           %CPU_ME %CPU_OTHRS UID  FAULTS   COW    MSGSENT   MSGRECV   SYSBSD
+2602  top          11.8 00:01.19 1/1   0    26    5044K  0B     0B     2602 2524 running  *0[1]            0.00000 0.00000    0    4647+    109    231790+   115881+   12599+
+0     kernel_task  3.6  15:57.45 178/4 0    0     168M   0B     0B     0    0    running   0[0]            0.00000 0.00000    0    82209    0      22014076+ 17863270+ 0
+1916  Terminal     2.3  00:41.34 9     2    312-  122M   65M-   5100K- 1916 1    sleeping *0[749]          0.19108 0.05125    501  831151+  984    253776+   55754+    187427+
+1     launchd      2.2  00:20.91 3     2    3383+ 22M+   0B     10M    1    0    sleeping  0[0]            0.00000 0.00000    0    32425+   1797   315740    89142     430582+
+1714  clion        1.9  10:20.76 75    2    552   1459M  3200K  305M   1714 1    sleeping *0[1555+]        0.00000 0.00575    501  3370708+ 77635  1038748+  318543+   2646526+
+220   WindowServer 0.9  21:34.04 11    5    2886+ 664M-  18M-   43M    220  1    sleeping *0[1]            0.45426 0.00225    88   3217470+ 141693 16265594+ 7282826+  9842545+
+383   DashlaneAgen 0.6  01:33.75 10    2    327   16M    0B     12M    383  1    sleeping *0[1]            0.14495 0.00000    501  50119+   713    471126+   313327+   1012178+
+2601  ex2          0.6  00:00.06 1     0    10    90M+   0B     0B     2601 2524 sleeping *0[1]            0.00000 0.00000    501  23412+   99     45+       22+       116+
+714   Trello Helpe 0.5  01:28.86 13    1    140   38M+   0B     26M    709  709  sleeping *0[1]            0.00000 0.00000    501  32917    1435   646679+   264409+   691438+
+421   com.apple.ge 0.5  00:03.31 6     4    93+   6980K+ 0B     3836K  421  1    sleeping  0[118]          0.39533 0.00000    501  12262+   249    30728+    5489+     86344+
+710   Trello Helpe 0.5  01:21.72 8     1    177   170M   1024K  29M    709  709  sleeping *0[4]            0.00000 0.00000    501  116929   1506   1082424+  528550+   449160+
+403   Macs Fan Con 0.3  00:45.82 6     1    230   16M+   40K-   10M    403  1    sleeping *0[1088]         0.05343 0.00000    501  18385    477    247686+   105288+   310238+
+551   DashlanePlug 0.3  00:59.47 6     1    168   10M    0B     7536K  551  1    sleeping *0[149387+]      0.00000 0.14495    501  9367     470    625814+   162269+   767571+
+713   Trello Helpe 0.3  00:48.60 15    2    176   136M+  0B     50M    709  709  sleeping *0[1]            0.00000 0.00000    501  387150+  4265   193900+   123110+   384645+
+151   hidd         0.3  05:49.95 6     3    245   2880K  0B     696K   151  1    sleeping *0[1]            0.02030 0.13717    261  143325+  169    1217415+  1033901+  9457000+
+371   useractivity 0.3  00:05.95 4     3    111+  3868K+ 0B     2048K  371  1    sleeping *14+[1205]       0.40941 0.10846    501  7462+    222    15558+    8937+     50133+
+150   bluetoothd   0.3  00:26.70 4     2    179   3268K+ 0B     952K   150  1    sleeping *0[1]            0.00000 0.28525    0    14430+   269    602680+   379370+   206191+
+390   sharingd     0.1  00:19.91 4     2    249+  35M+   0B     22M    390  1    sleeping *0[1]            0.00000 0.08258    501  217972+  9015   80115+    27616+    303644+
+709   Trello       0.1  00:53.72 26    1    395   67M    0B     28M    709  1    sleeping *0[936]          0.00000 0.00000    501  191817+  2634   513203+   249613+   520461+
+499   Telegram     0.1  09:49.94 31    6    1853- 763M   1732K- 327M   499  1    sleeping *0[2316]         0.00000 0.00000    501  5605814  31108  2609298+  683710    4675319+
+ */

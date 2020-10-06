@@ -1,0 +1,6 @@
+A machine has 16-bit virtual addresses => it has 2^16 addresses.
+Pages are 8 KB = 2^13 bits for offset.
+
+16 - 13 = 3 bits for page number => 2^3 = 8 entries, i.e. up to (2^16)/(2^13) = 2^3 = 8 entries because the number of entries needed for a single-level linear page table equals number of pages.
+
+Answer: 8

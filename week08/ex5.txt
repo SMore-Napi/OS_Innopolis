@@ -1,0 +1,4 @@
+The physical address is a real address that exists in memory unit (page frame) in physical memory.
+
+The virtual address is generated for some program. It can be the same as physical address or it can be different. The range of address space also can differ from the actual physical memory size. The Memory Management Unit maps this virtual address (from some page) to some physical memory page frame. It is viewed by some program and this program use this address as a reference to access real physical address.
+
