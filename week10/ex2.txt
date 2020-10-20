@@ -1,0 +1,29 @@
+smore@MacBook-Pro week10 % cd ~/Desktop
+smore@MacBook-Pro Desktop % cd Innopolis 
+smore@MacBook-Pro Innopolis % cd Operating\ Systems 
+smore@MacBook-Pro Operating Systems % cd Labs 
+smore@MacBook-Pro Labs % cd OS_Innopolis 
+smore@MacBook-Pro OS_Innopolis % cd week01
+smore@MacBook-Pro week01 % ls
+ex1.txt	ex2.txt	ex3.sh	ex4	main.c
+smore@MacBook-Pro week01 % touch file.txt
+smore@MacBook-Pro week01 % cd 
+smore@MacBook-Pro ~ % cd ~/Desktop
+smore@MacBook-Pro Desktop % cd Innopolis 
+smore@MacBook-Pro Innopolis % cd Operating\ Systems 
+smore@MacBook-Pro Operating Systems % cd Labs 
+smore@MacBook-Pro Labs % cd OS_Innopolis 
+smore@MacBook-Pro OS_Innopolis % cd week10
+smore@MacBook-Pro week10 % ls
+ex1.txt
+smore@MacBook-Pro week10 % pwd
+/Users/smore/Desktop/Innopolis/Operating Systems/Labs/OS_Innopolis/week10
+smore@MacBook-Pro week10 % ls -i ../week01/file.txt
+15186444 ../week01/file.txt
+smore@MacBook-Pro week10 % link ../week01/file.txt _ex2.txt
+smore@MacBook-Pro week10 % find ../week01/ -inum 15186444
+../week01//file.txt
+smore@MacBook-Pro week10 % find .. -inum 15186444 
+../week01/file.txt
+../week10/_ex2.txt
+smore@MacBook-Pro week10 % find .. -inum 15186444 -exec rm {} \;

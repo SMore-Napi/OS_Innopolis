@@ -1,0 +1,21 @@
+smore@MacBook-Pro Desktop % touch _ex3.txt
+smore@MacBook-Pro Desktop % ls -l _ex3.txt
+-rw-r--r--  1 smore  staff  0 20 окт 15:17 _ex3.txt
+smore@MacBook-Pro Desktop % chmod -x _ex3.txt 
+smore@MacBook-Pro Desktop % ls -l _ex3.txt   
+-rw-r--r--  1 smore  staff  0 20 окт 15:17 _ex3.txt
+smore@MacBook-Pro Desktop % chmod u+r _ex3.txt
+smore@MacBook-Pro Desktop % chmod u+w _ex3.txt 
+smore@MacBook-Pro Desktop % chmod u+x _ex3.txt
+smore@MacBook-Pro Desktop % chmod o+r _ex3.txt
+smore@MacBook-Pro Desktop % chmod o+w _ex3.txt
+smore@MacBook-Pro Desktop % chmod o+x _ex3.txt
+smore@MacBook-Pro Desktop % ls -l _ex3.txt    
+-rwxr--rwx  1 smore  staff  0 20 окт 15:17 _ex3.txt
+smore@MacBook-Pro Desktop % chmod g=u _ex3.txt
+smore@MacBook-Pro Desktop % ls -l _ex3.txt    
+-rwxrwxrwx  1 smore  staff  0 20 окт 15:17 _ex3.txt
+
+660 -rw-rw----
+775 -rwxrwxr-x
+777 -rwxrwxrwx
