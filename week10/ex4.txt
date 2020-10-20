@@ -1,4 +1,1 @@
-./tmp/.
-./tmp/..
-./tmp/link1
-./tmp/file1
+Index node = 15194123; Number of files = 2; Files: link1, file1
