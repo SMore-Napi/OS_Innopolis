@@ -15,7 +15,7 @@
 
 /**
  * The program output:
- *
+ * For index node = 15194123 there are 2 files: link1, file1
  *
  * Also, it is duplicated in ex4.txt file
  */
