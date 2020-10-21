@@ -84,10 +84,28 @@ int main() {
 int get_number_files_in_directory(char *path) {
     int number_files = 0;
 
+    struct dirent *struct_dirent;
+    char new_recursive_path[CHAR_BUFFER_SIZE];
+
     DIR *dir = opendir(path);
-    while (readdir(dir) != NULL) {
-        number_files++;
+    while ((struct_dirent = readdir(dir)) != NULL) {
+        // In case it is a folder
+        if (struct_dirent->d_type == DT_DIR) {
+            // Ignore '.' and '..' folders
+            if (strcmp(struct_dirent->d_name, ".") != 0 && strcmp(struct_dirent->d_name, "..") != 0) {
+                // Create the path for the sub folder
+                strcpy(new_recursive_path, path);
+                strcat(new_recursive_path, struct_dirent->d_name);
+                strcat(new_recursive_path, "/");
+
+                // Go to the folder recursively
+                number_files += get_number_files_in_directory(new_recursive_path);
+            }
+        } else {
+            number_files++;
+        }
     }
+
     closedir(dir);
 
     return number_files;
