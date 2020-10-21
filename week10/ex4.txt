@@ -1,1 +1,1 @@
-Index node = 15194123; Number of files = 2; Files: link1, file1
+For index node = 15194123 there are 2 files: link1, file1

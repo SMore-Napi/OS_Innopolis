@@ -55,28 +55,30 @@ int main() {
         snprintf(file_path, sizeof(file_path), "%s%s", DIR_PATH, struct_dirent->d_name);
 
         // Write the file with a hard link count of two or more
-        if (stat(file_path, &struct_stat) != -1 && struct_stat.st_nlink >= 2 && struct_dirent->d_name[0] != '.') {
+        if (stat(file_path, &struct_stat) != -1 && struct_stat.st_nlink >= 2) {
+            // Ignore '.' and '..' files
+            if (strcmp(struct_dirent->d_name, ".") != 0 && strcmp(struct_dirent->d_name, "..") != 0) {
+                int isExist = 0;
 
-            int isExist = 0;
+                // Concatenate the file name its i-node is already stored
+                for (int i = 0; i < counter; i++) {
+                    if (i_nodes[i] == struct_dirent->d_ino) {
+                        strcat(files_names[i], ", ");
+                        strcat(files_names[i], struct_dirent->d_name);
+                        count_files[i]++;
 
-            // Concatenate the file name its i-node is already stored
-            for (int i = 0; i < counter; i++) {
-                if (i_nodes[i] == struct_dirent->d_ino) {
-                    strcat(files_names[i], ", ");
-                    strcat(files_names[i], struct_dirent->d_name);
-                    count_files[i]++;
-
-                    isExist = 1;
-                    break;
+                        isExist = 1;
+                        break;
+                    }
                 }
-            }
 
-            // Write the new i-node in case it hasn't been met before
-            if (!isExist) {
-                i_nodes[counter] = struct_dirent->d_ino;
-                strcpy(files_names[counter], struct_dirent->d_name);
-                count_files[counter] = 1;
-                counter++;
+                // Write the new i-node in case it hasn't been met before
+                if (!isExist) {
+                    i_nodes[counter] = struct_dirent->d_ino;
+                    strcpy(files_names[counter], struct_dirent->d_name);
+                    count_files[counter] = 1;
+                    counter++;
+                }
             }
         }
     }
@@ -86,7 +88,7 @@ int main() {
     // For each such file it should display together all file names that point to the file
     FILE *file = fopen(OUTPUT, "w");
     for (int i = 0; i < counter; i++) {
-        fprintf(file, "Index node = %d; Number of files = %d; Files: %s\n", i_nodes[i], count_files[i], files_names[i]);
+        fprintf(file, "For index node = %d there are %d files: %s\n", i_nodes[i], count_files[i], files_names[i]);
     }
     fclose(file);
 
