@@ -1,0 +1,25 @@
+The "Program 1" has this output:
+Hello
+Hello
+
+The "Program 2" has this output:
+Hello
+
+
+
+This happens because the printf() function uses the Line buffering.
+As was stated in the lab presentation:
+"On output, data is written when a newline character is inserted into the stream or when the buffer is full".
+So, it means that the buffer size is bigger than 6 symbols.
+
+That's why in the first program the output was flushed only on this line 'printf("\n");'. Before this moment the "Hello" string was in the buffer.
+When the 'fork();' function had been called there were two running processes.
+Each of them had its own buffer with "Hello" string.
+Therefore, by the end of the program each process flushed its buffer (because of 'printf("\n");').
+That's why we got two "Hello" strings.
+
+In the second program this line of code 'printf("Hello\n");' already leaded the buffer to flush its content to the output because of '\n' symbol. 
+After that, the buffer was empty.
+So, when we called this function 'fork();' both processes had empty buffer.
+Each of these processes printed only this symbol '\n' in 'printf("\n");' line.
+That's why we got only one "Hello" string before the 'fork();' and two new lines in the output.
