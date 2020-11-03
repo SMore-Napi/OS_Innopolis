@@ -1,0 +1,100 @@
+Roman Soldatov BS19-02
+Exercise 3
+
+Observations:
+1) The bigger the file size, the slower the copying. (It's obvious).
+2) Big buffer size provides fast copying (bigger buffer, then faster copying) since big buffer provides less amount of transfers.
+3) Copying is slower with O_SYNC flag, than copying without this flag. It happens since this flag requires the caching, and it provides a stronger guarantee that the file data and file metadata has been written to disk.
+
+
+
+To test it with different buffer and file sizes I used the following script.
+It is also duplicated in different file: ex3.sh
+
+# Create two files from which we will copy
+# file1 has 1MB size
+# file100 has 100MB size
+for i in 1 100
+do
+	dd if=/dev/zero of=file$i bs=$(($i*1024*1024)) count=1
+done
+
+# Experiment with different file and buffer sizes
+for k in 16 1024
+do
+	# Set the buffer size while compiling
+	echo "BUFFER SIZE = $k bytes"
+	gcc -DBUF_SIZE=$k -o copy1 copy.c
+	gcc -DBUF_SIZE=$k -DSYNC=1 -o copy2 copy.c
+
+	# Check time for different files
+	for i in 1 100
+	do
+		echo "File size = $i MB"
+		# Check with and without O_SYNC flag
+		echo "O_SYNC"
+		time ./copy2 file$i newFile
+		echo "No O_SYNC"
+		time ./copy1 file$i newFile
+	done
+done
+
+# Remove temporary files
+rm file{1,100} copy{1,2} newFile
+
+
+
+Results:
+
+BUFFER SIZE = 16 bytes
+
+File size = 1 MB
+
+O_SYNC
+real	0m2.735s
+user	0m0.041s
+sys	0m1.114s
+
+No O_SYNC
+real	0m0.423s
+user	0m0.032s
+sys	0m0.202s
+
+File size = 100 MB
+
+O_SYNC
+real	3m51.465s
+user	0m3.768s
+sys	1m45.002s
+
+No O_SYNC
+real	0m22.565s
+user	0m3.087s
+sys	0m19.058s
+
+BUFFER SIZE = 1024 bytes
+
+File size = 1 MB
+
+O_SYNC
+real	0m0.434s
+user	0m0.002s
+sys	0m0.027s
+
+No O_SYNC
+real	0m0.231s
+user	0m0.001s
+sys	0m0.005s
+
+File size = 100 MB
+
+O_SYNC
+real	0m3.893s
+user	0m0.061s
+sys	0m1.737s
+
+No O_SYNC
+real	0m0.500s
+user	0m0.051s
+sys	0m0.367s
+
