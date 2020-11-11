@@ -1,0 +1,24 @@
+Roman Soldatov BS19-02
+Exercise 2
+
+1) Recovery uses possible methods: Preemption, Rollback, Killing processes.
+
+(a) Preemption is based on temporarily taking a resource away from one process and give it to another process.
+Disadvantage of this strategy: taking a resource away is highly dependent on the nature of it.
+
+(b) Rollback requires writing a state to a file so that it can be restarted later.
+
+Disadvantage of this strategy: it requires additional memory; after abort we need to repeat
+steps of a process again, which might lead to time consumption.
+
+(c) Killing processes - is a simple way for solving a deadlock problem.
+Disadvantage of this strategy: for some processes it cannot be applicable because of ill effects. 
+
+
+2) Avoidance requires analysis of processes to determine in advance whether there will be a deadlock or not.
+For example, it can be done via Banker's algorithm.
+Disadvantage of this strategy: it works only if the certain information about processes is available in advance.
+
+
+3) Prevention attacks four conditions: Mutual-Exclusion, Hold-and-Wait, No-Preemption, Circular wait to avoid a deadlock.
+Disadvantage of this strategy: resource allocation constraints lead to the inability to parallelism.
